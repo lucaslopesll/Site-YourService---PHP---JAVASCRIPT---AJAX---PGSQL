@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/gifchaveiro.gif');
+    background-repeat: no-repeat;
+    background-size: 2000px 1000px;
+}
+#cabecalho{
+    width: 100%;
+    height: 130px;
+    background-color: #252323;
+
+}
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 30px;
+    text-align: center;
+  }
+  
+  #checkbox-menu{
+    position: absolute;
+    opacity: 0;
+  }
+  
+  label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+  }
+  
+  label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #ff6506;
+    transition: 0.25s ease-in-out;
+  }
+  
+  label span:nth-child(1){
+    top: 0;
+  }
+  
+  label span:nth-child(2){
+    top: 8px;
+  }
+  
+  label span:nth-child(3){
+    top: 16px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top:8px;
+  }
+
+#logo{
+    width: 60%;
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 800px;
+    align-items: center;
+}
+h3{
+  font-size: 33px;
+  font-weight: bolder;
+  font-family: system-ui;
+  text-align: center;
+  text-decoration: 1px underline #ff6506;
+  margin-top: 5px;
+}
+#areaPrincipal{
+  width: 70%;
+  height: 750px;  
+  float:left;
+  border: 1px solid #252323;
+  background-color: white;
+  opacity: 0.85;
+  margin-top: 20px;
+  margin-left: 15%;
+  border-radius: 5px;
+  box-shadow: 6px 5px 5px #252323 ;
+
+}
+#areaIni{
+    height: 100px ;
+}
+select{
+  height: 40px;
+  background-color: #ff6506;
+  border: 1px solid black;
+  color:white;
+  font-size: 13px;
+  font-weight: bolder;
+  width: 150px;
+  float: left;
+  margin-left: 2%;
+  
+}
+.box-busca{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  margin-left: 330px;
+}
+.search-box-input::placeholder {
+  
+  color:#ffffff;
+  opacity: 0.6;
+}
+/* Chrome, Opera ySafari */
+.search-box-input::-webkit-input-placeholder { color: #ffffff; }
+/* Firefox 19+ */
+.search-box-input::-moz-placeholder { color: #ffffff; }
+/* IE 10+ y Edge */
+.search-box-input:-ms-input-placeholder { color: #ffffff; }
+.search-box form {
+  
+  display: flex;
+  border-radius: 50px;
+  background-color: #4c4c4c;
+  height: 45px;
+}
+.search-box:hover .search-box-input {
+  
+  padding-left: 2em;
+  padding-right: 1em;
+  width: 250px;
+}
+.search-box-input {
+  outline: 0;
+  font-size: 1.2em;
+  color: #fff;
+  width: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  transition: .45s;
+}
+.search-box-button {
+ display: flex;
+ border-radius: 50%;
+ width: 45px;
+ height: 45px;
+ background-color: #ff6506;
+ border: none;
+ cursor: pointer;
+ transition: .3s;
+}
+.search-box-button:active  {
+  transform: scale(.85);
+}
+.search-box-icone {
+  margin: auto;
+  color: #fff;
+}
+@media screen and (min-width: 400px){
+  
+  .search-box:hover .search-box-input {
+      width: 360px;
+  }
+}
+
+#btn-visu{
+  height: 40px;
+  background-color: #ff6506;
+  border: 1px solid black;
+  color:white;
+  font-size: 13px;
+  font-weight: bolder;
+  width: 150px;
+  float: right;
+  margin-right: 2%;
+  margin-top: -7.5%;
+}
+table{
+  width: 100%;
+  margin-bottom: 0.5%;
+}
+fieldset{
+  width: 70%;
+  padding: 1%;
+  margin-left: 15%;
+  height: 100%;
+}
+table td, table th{
+  border: 1px solid black;
+}
+p{
+  float: left;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+#p{
+  color:green;
+  float: left;
+  margin-left: 5px;
+}
+#pp{
+  color:red;
+  float: left;
+  margin-left: 5px;
+}
+#ppp{
+  color:#ff6506;
+  float: left;
+  margin-left: 5px;
+}
+a{
+  text-decoration: none;
+}
+

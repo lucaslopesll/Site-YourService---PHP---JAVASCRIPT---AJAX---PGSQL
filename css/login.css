@@ -1,0 +1,134 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: url('../img/fundogif2.gif');
+    background-repeat: no-repeat;
+    background-size: 2000px 1000px;
+    
+  
+    
+}
+.box{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    opacity: 0.85;
+    border: 5px solid #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    height: 60%;
+
+}
+fieldset{
+    border: 3px solid #f5892a;
+    margin-top:30%;
+    border-radius: 10px;
+}
+legend{
+    border: 1px solid rgb(255, 30, 75, 0.559);
+    padding: 10px;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(238, 169, 79), rgb(246, 144, 11));
+    border-radius: 8px;
+    
+}
+.inputBox{
+    position: relative;
+}
+.inputUsuario{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333228;
+    outline: none;
+    color: #333228;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+#logo{
+    width: 175px;
+    height: 175px;
+    margin-top: 10px;
+    margin-left: 35%;
+    margin-bottom: -100px;
+    float: left ;
+  
+  }
+h1{
+    color:rgb(246, 144, 11);
+    text-align: left;
+    float: right;
+    margin-right: 40px;
+    font-size: 35px;
+    
+}
+p {
+    font-weight: 500;
+    margin-top: -10px;
+    font-size: 19px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 2%;
+    
+  }
+  #CampoErro{
+    width:80%;
+    height: 40px;
+    margin-top: 3%;
+    margin-left: 10%;
+    border-radius: 10px;
+    background-color: rgba(238, 30, 30, 0.849);
+    
+  }
+span{
+    color:#333228;
+    border: 2px solid #f5bb2a;
+}
+a{
+    color: #333228;
+    margin-left: 20%;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+#revalida{
+    margin-left: 35%;
+    text-align: center;
+    font-weight: bold;   
+}
+#novo{
+    margin-left: 29%; 
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUsuario:focus ~ .labelInput,
+.inputUsuario:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: rgb(255, 30, 75, 0.559);
+}
+
+#botao{
+    background-image: linear-gradient(to right,rgb(238, 169, 79), rgb(246, 144, 11));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #333228;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#botao:hover{
+    background-image: linear-gradient(to right,rgb(246, 219, 11),rgb(181, 17, 235));
+}

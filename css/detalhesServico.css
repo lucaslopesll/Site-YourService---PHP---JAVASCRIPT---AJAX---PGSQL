@@ -1,0 +1,235 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: url('../img/gifmarceneiro.gif');
+    background-repeat: no-repeat;
+    background-size: 2200px 1000px;
+    
+  }
+  
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  #cabecalho{
+      width: 100%;
+      height: 130px;
+      background-color: #252323;
+  }
+  .container{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-left: 30px;
+      text-align: center;
+      
+    }
+    
+    #checkbox-menu{
+      position: absolute;
+      opacity: 0;
+    }
+    
+    label{
+      cursor: pointer;
+      position: relative;
+      display: block;
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+    }
+    
+    label span{
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 100%;
+      border-radius: 30px;
+      background: #ff6506;
+      transition: 0.25s ease-in-out;
+    }
+   
+    label span:nth-child(1){
+      top: 0;
+    }
+    
+    label span:nth-child(2){
+      top: 8px;
+    }
+    
+    label span:nth-child(3){
+      top: 16px;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(1){
+      transform: rotate(-45deg);
+      top: 8px;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(2){
+      opacity: 0;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(3){
+      transform: rotate(45deg);
+      top:8px;
+    }
+  
+  #logo{
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      margin-left: 800px;
+      align-items: center;
+  }
+  h2{
+    margin-left: 47%;
+    margin-top: 40px;
+  }
+  
+  .box{
+    color: #252323c9;
+    padding: 50px;
+    width: 60%;
+    margin-left: 22%;
+    margin-top: 3%;
+    background-color:white; 
+    border-radius: 25px;
+    opacity: 0.85;
+  }
+
+  h3{
+    font-size: 33px;
+    font-weight: bolder;
+    font-family: system-ui;
+    text-align: center;
+    text-decoration: 1px underline #ff6506;
+    margin-top: 5px;
+  }
+  
+  fieldset{
+    border: 3px solid #ff6506;
+    margin-top:5%;
+    border-radius: 10px;
+    
+  }
+  legend{
+    border: 1px solid #252323;
+    padding: 10px;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(238, 169, 79), #ff6506);
+    border-radius: 8px;
+  }
+  
+  
+  .inputBox{
+    position: relative;
+    margin: 7px;
+  }
+  
+  .inputUsuario{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #252323;
+    outline: none;
+    color: #252323;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+  }
+  .labelInput{
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    width: 1000px;
+    pointer-events: none;
+    transition: .5s;
+  
+  }
+  .inputUsuario:focus ~ .labelInput,
+  .inputUsuario:valid ~ .labelInput{
+    top: -20px;
+    font-size: 15px;
+    color: #ff6506;
+  }
+  span{
+    color:#252323;
+    border: 2px solid #ff6506;
+  }
+  
+  #botao{
+    background-image: linear-gradient(to right,rgb(238, 169, 79), #ff6506);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #252323;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  #botao:hover{
+    background-image: linear-gradient(to right,rgb(246, 219, 11),#ff6506);
+  }
+  .uploading{
+    width: 300px;
+    height: 65px;
+    overflow:hidden;
+    position:relative;
+    background-repeat: no-repeat;
+    margin-left: 34%;
+    background-image:  url(../img/alterar4.png);
+    
+  }
+  .uploading input{
+      display: block !important;
+      width: 300px !important;
+      height: 45px !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+  }
+  
+  
+  #camp-perfil{
+    width: 200px;
+    height: 100px;
+    float:left;
+  
+  }
+  .formFoto{
+    width: 100%;
+    height: 50px; 
+    float: left;
+    
+    
+  }
+  #servicos{
+    width: 50%;
+    height: 175px;  
+    float:left;
+    border: 1px solid;
+    margin-left: 80px;
+    margin-top: 170px;
+    
+  }
+  #caixin{
+  background-color: white;
+  height: 30px;
+  width: 50px;
+  float: left;  
+  margin-top: 80px;
+  margin-left: 30px;
+  }
+  #voltar{
+    width: 8%;
+    height: 20%;  
+    float:left;
+    margin-top: 90px;
+    background-color: #ff6506;
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  

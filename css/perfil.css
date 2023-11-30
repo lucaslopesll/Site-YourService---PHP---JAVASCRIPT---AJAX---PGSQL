@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/gifchaveiro.gif');
+  background-repeat: no-repeat;
+  background-size: 1950px 1000px;
+}
+#cabecalho{
+    width: 100%;
+    height: 130px;
+    background-color: #252323;
+
+}
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 30px;
+    text-align: center;
+  }
+  
+
+
+#logo{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-left: 47%;
+    align-items: center;
+    margin-top: -30px;
+}
+#perfil, #coments{
+  width: 60%;
+  height: 750px;  
+  float:left;
+  border: 1px solid #252323;
+  margin-top: -30px;
+  margin-left: 20%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 6px 5px 5px #252323 ;
+  opacity: 0.85;
+}
+#fotoCapa{
+  width: 70%;
+  height: 150px;  
+  float:left;
+  margin: 10px;
+  border-radius: 50%;
+}
+#camp-perfil{
+  width: 200px;
+  height: 200px;
+  float:left;
+
+}
+#descricao{
+  width: 40%;
+  height: 200px;  
+  float:left;
+  margin: 10px;
+  margin-top: -1%;
+  padding-bottom: 15%;
+  border: 1px solid #ff6506;
+  background-color: #f8d2bb;
+  border-radius: 10px;
+}
+#perfil h2{
+  font-size: 33px;
+  margin-left: -6%;
+  font-weight: bolder;
+}
+#avaliacao{
+  width: 18%;
+  height: 100px;  
+  float:left;
+ 
+  margin-left: 4%;
+  margin-top: 1%;
+  padding: 2%;
+}
+#avaliacao img{
+  height: 25px;
+  width: 25px;
+}
+#servicos{
+  width: 45%;
+  height: 60%;  
+  float:left;
+  border: 1px solid;
+  margin-left: 40px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  border: 1px solid #ff6506;
+  background-color: #f8d2bb;
+  box-shadow: #ff6506;
+}
+#comentarios{
+  width: 45%;
+  height: 60%;  
+  float:left;
+  border: 1px solid #ff6506;
+  background-color: #f8d2bb;                  
+  margin-left: 3%;
+  margin-top: 50px;
+  overflow-y: scroll;
+  
+}
+#chame{
+  width: 12%;
+  height: 30px;  
+  float:right;
+  margin-top: 175px;
+  margin-right: 50px;
+  background-color: #ff6506;
+  color: #252323;
+  
+}
+#editarPerfil{
+  width: 12%;
+  height: 4%;  
+  float:left;
+  margin-top: 10px;
+  background-color: #ff6506;
+  color: white;
+  margin-left: 300px;
+  margin-top: -80px;
+  font-size: 18px;
+}
+#campFoto{
+  padding: 1%;
+}
+.perf{
+  width: 150px;
+  height: 150px;
+  float:left;
+  border-radius: 50%;
+  border: 3px solid #ff6506;
+  padding: 10px;
+}
+#foto{
+  width: 100%;
+  height: 100%;
+  float:left;
+  border-radius: 10px; 
+  flex-wrap: wrap;
+ 
+ 
+
+}
+#quadrin{
+  width: 40%;
+  height: 30%;
+  margin-left: 7%;
+  float: left;
+  margin-top:4%;
+  border: 1px solid #ff6506 ;
+  border-radius: 10px; 
+}
+h2{
+  margin-left: 25px;  
+  text-align: center;
+}
+h1{
+  margin-top: -5%;
+  margin-left: 25px; 
+  font-size: 22px; 
+  
+}
+.star{
+  width: 15%;
+  float: right;
+  margin: 5px;
+}
+#rod{
+	width: 100%;
+	height: 190px;
+  float: left;	
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+  background-color: #252323;
+  color: #ff6506 ;
+} 
+#rod .icone{
+  width: 50px;
+}
+li{
+  font-size: 20px;
+  margin: 3%;
+  margin-left: 10%;
+  font-weight: bolder;
+}
+.quad{
+  width: 19%;
+	height: 60%;
+  float: left;
+  margin-left: 40px;
+  margin-top: 45px;
+  background-color: #ff6506;
+}
+table{
+  width: 100%;
+  margin-bottom: 0.5%;
+}
+
+table td, table th{
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+/* cabeçalho fixo */
+.menu {
+  background-color: #252323;
+  width: 100%;
+  height: 130px;
+  padding: 40px 0;
+  position:relative;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* menu retratil lateral */
+
+
+#check {
+  display: none;
+}
+
+#icone {
+  cursor: pointer;
+  padding: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+}
+
+.barra {
+  background-color: #252323;
+  height: 86.5%;
+  width: 250px;
+  position: absolute;
+  transition: all .2s linear;
+  left: -250px;
+  margin-top: 6.7%;
+
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+}
+
+
+nav a {
+  text-decoration: none;
+
+}
+
+.Link {
+  
+  
+  padding: 20px;
+  font-family: 'Gotham';
+  font-size: 12pt;
+  transition: all .3s linear;
+  color: #ffffff;
+  background: #252323;
+  opacity: 0;
+
+
+}
+
+.Link:hover {
+  background-color: #ff6506;
+  color: #ffffff;
+
+}
+
+#check:checked~.barra {
+  transform: translateX(250px);
+}
+
+#check:checked~.barra nav a .Link {
+  opacity: 1;
+  transition-delay: .3s;
+}
+
+#banner1 {
+  padding-top: 97px;
+  width: 100%;
+
+}
+
+.mburg {
+
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  
+  top: 25px;
+  left: 25px;
+}
+
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #ff6506;
+  width: 30px;
+  height: 3px;
+  top: -75px;
+  left: 15px;
+  transition: .5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  background: #ff6506;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: .5s ease-in-out;
+}
+
+.hamburguer:before {
+  top: -10px;
+}
+
+.hamburguer:after {
+  bottom: -10px;
+}
+
+header input {
+  display: none;
+}
+
+header input:checked~label .hamburguer {
+  transform: rotate(45deg);
+}
+
+header input:checked~label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+header input:checked~label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+

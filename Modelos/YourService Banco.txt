@@ -1,0 +1,109 @@
+CREATE TABLE cliente(
+	id_cliente serial,
+	nome_cliente VARCHAR(100) NOT NULL,
+	datanasc_cliente DATE NOT NULL,
+	endereco_cliente VARCHAR(100),
+	telefone_cliente VARCHAR(50),
+	email_cliente VARCHAR(80) NOT NULL,
+	senha_cliente VARCHAR NOT NULL,
+	PRIMARY KEY (id_cliente)
+);
+CREATE TABLE profissional(
+	id_prof serial,
+	nome_prof VARCHAR(100) NOT NULL,
+	cpf_prof VARCHAR(30) NOT NULL,
+	endereco_prof VARCHAR(100) NOT NULL,
+	telefone_prof VARCHAR(50),
+	datanasc_prof DATE NOT NULL,
+	nota_geral_prof INTEGER,
+	foto_prof VARCHAR(500),
+	tipo_prof VARCHAR(100),
+	temposervico_prof INTEGER,
+	email_prof VARCHAR(100) NOT NULL,
+      senha_prof VARCHAR(100) NOT NULL,
+	PRIMARY KEY (id_prof)
+);
+CREATE TABLE imagens_servicos(
+	id_path serial,
+	id_imgs_prof_fk INTEGER,
+	imgs_servs_prof VARCHAR(300),
+    	PRIMARY KEY (id_path),
+	FOREIGN KEY (id_imgs_prof_fk) REFERENCES profissional(id_prof)
+);
+
+CREATE TABLE lista_servicos(
+	id_lista VARCHAR(100) NOT NULL,
+	nome_lista VARCHAR(100) NOT NULL,
+	tiposervico_lista VARCHAR(100) NOT NULL,
+	PRIMARY KEY (id_lista)
+);
+CREATE TABLE contata_cliente_prof(
+	id_cont_cliente_fk serial,
+	id_cont_prof_fk serial,
+	cont_data DATE,
+	cont_hora TIME,
+	FOREIGN KEY (id_cont_cliente_fk) REFERENCES cliente(id_cliente),
+	FOREIGN KEY (id_cont_prof_fk) REFERENCES profissional(id_prof),
+	PRIMARY KEY (id_cont_cliente_fk, id_cont_prof_fk )
+);
+CREATE TABLE realiza_prof_servico(
+	id_serv_real serial,
+	data_inic_real DATE ,
+	data_fim_real DATE ,
+	real_prof_fk serial,
+	real_lista_fk VARCHAR(100) NOT NULL,
+	real_cliente_fk serial,
+	status_serv_prof VARCHAR(100),
+	FOREIGN KEY (real_prof_fk) REFERENCES profissional(id_prof),
+	FOREIGN KEY (real_lista_fk) REFERENCES lista_servicos(id_lista),
+	FOREIGN KEY (real_cliente_fk) REFERENCES cliente(id_cliente),
+	PRIMARY KEY (id_serv_real)	
+);
+CREATE TABLE avaliacao(
+	id_avaliacao serial,
+	data_avaliacao DATE NOT NULL,
+    	nota_avaliacao INTEGER,
+	qualidade_avaliacao INTEGER,
+	orcamento_avaliacao INTEGER,
+	comunicacao_avaliacao INTEGER,
+	comentario_avaliacao VARCHAR(500),
+	geral_avaliacao INTEGER,
+	avalia_real_fk INTEGER,
+	FOREIGN KEY (avalia_real_fk) REFERENCES realiza_prof_servico(id_serv_real),
+	PRIMARY KEY (id_avaliacao)
+);
+CREATE TABLE imagem_servico(
+	id_img_servico serial,
+	img_serv_prof VARCHAR,
+	FOREIGN KEY (id_img_servico) REFERENCES realiza_prof_servico(id_serv_real),
+	PRIMARY KEY (id_img_servico, img_serv_prof )
+);
+CREATE TABLE especialidade(
+	id_especialidade serial,
+	especialidade_prof_fk integer,
+	especialidade_lista_fk VARCHAR(100),
+	FOREIGN KEY (especialidade_prof_fk) REFERENCES profissional(id_prof),
+FOREIGN KEY (especialidade_lista_fk) REFERENCES lista_servicos(id_lista),
+	PRIMARY KEY (id_especialidade)
+);
+
+INSERT INTO lista_servicos (id_lista, nome_lista, tiposervico_lista)
+VALUES
+('1E','Reparos e Manutenção da Rede Elétrica','Eletricista'),
+('2E','Troca de Fiação Elétrica','Eletricista'),
+('3E','Instalação e Conserto de Chuveiro','Eletricista'),
+('4E','Instalação de Tomadas','Eletricista'),
+('5E','Instalação de Lâmpadas e Luminárias','Eletricista'),
+('6E','Instalação de Ar Condicionado','Eletricista'),
+('1P','Construção de parede','Pedreiro'),
+('2P','Construção de Fundação','Pedreiro'),
+('3P','Aplicação de reboco','Pedreiro'),
+('4P','Aplicação de massa corrida','Pedreiro'),
+('5P','Demolição','Pedreiro'),
+('6P','Instalação de novo revestimento','Pedreiro'),
+('1PT','Pintura de Paredes','Pintor'),
+('2PT','Pintura Externa e Interna','Pintor'),
+('3PT','Pintura de Apartamentos','Pintor'),
+('4PT','Pintura de Prédios','Pintor'),
+('5PT','Pintura de Móveis','Pintor'),
+('6PT','Pintura Decorativa','Pintor');

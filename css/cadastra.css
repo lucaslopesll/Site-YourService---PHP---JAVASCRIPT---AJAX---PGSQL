@@ -1,0 +1,118 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: url('../img/fundogif1.gif');
+    background-repeat: no-repeat;
+    background-size: 2200px 1300px;
+
+}
+
+.box{
+    color: #252323c9;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+
+}
+fieldset{
+    border: 3px solid #ff6506;
+    margin-top:5%;
+    border-radius: 10px;
+    
+}
+legend{
+    border: 1px solid #252323;
+    padding: 10px;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(238, 169, 79), #ff6506);
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUsuario{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #252323;
+    outline: none;
+    color: #252323;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUsuario:focus ~ .labelInput,
+.inputUsuario:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: #ff6506;
+}
+span{
+    color:#252323;
+    border: 2px solid #ff6506;
+}
+
+#botao{
+    background-image: linear-gradient(to right,rgb(238, 169, 79), #ff6506);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #252323;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#botao:hover{
+    background-image: linear-gradient(to right,rgb(246, 219, 11),#ff6506);
+}
+#mostrar_Cliente form input {
+    display: block;
+}
+
+#formularioCliente {
+    display: none;
+}
+#mostrar_Motorista form input {
+    display: block;
+}
+#formularioMotorista {
+    display: none;
+}
+#logo{
+    height: 200px;
+    width: 200px;
+    margin-left: 195px;
+  
+  }
+  #words{
+    width: 100%;
+  }
+  #set{
+    margin-top: 2px;
+
+    display: block;
+    
+  }
+  #scales{
+  
+    float: left;
+  
+    
+  }
+  #check {
+    margin-bottom: 12px;
+  }
+  
+  
